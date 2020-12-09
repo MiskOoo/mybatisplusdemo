@@ -62,18 +62,18 @@ class MybatisplusdemoApplicationTests {
         List<User> users = userMapper.selectList(userQueryWrapper);
         users.forEach(System.out::println);
     }
-//
-//    @Test
-//    void Inset(){
-//        QueryWrapper<User> userQueryWrapper = Wrappers.query();
-//        for(int i=0;i<20;i++){
-//            String name = "Jone"+i;
-//            String email = "test"+i+"@qq.com";
-//            Long id = (long)(7+i);
-//            User user = new User(id,name,19+i,email);
-//            userMapper.insert(user);
-//        }
-//    }
+
+    @Test
+    void Inset(){
+        QueryWrapper<User> userQueryWrapper = Wrappers.query();
+        for(int i=0;i<20;i++){
+            String name = "Jone"+i;
+            String email = "test"+i+"@qq.com";
+            Long id = (long)(7+i);
+            User user = new User(id,name,19+i,email);
+            userMapper.insert(user);
+        }
+    }
 
     // 测试分页
     @Test
